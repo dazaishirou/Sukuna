@@ -1,0 +1,224 @@
+:root {
+  --couleurheader1:red;
+  --couleurheader2:black;
+    --couleurtransparence:rgb(40 24 24 / 20%);
+    --couleurtransparence2: rgb(40 24 24 / 50%);
+  
+    --little-size: 12px;
+    --normal-size: 14px;
+    --medium-size: 16px;
+    --large-size: 18px;
+    --title-size: 22px;
+  --fontjap:'Yuji Syuku';
+ --fonttitre: 'Neucha';
+    --font: 'Raleway';
+    --couleurtest: #111;
+    --light: #232323;
+    --couleurtexte: #D9D9D9;
+    --main-background-color: #161616;
+    --headerbackground: url(https://i.imgur.com/W4DjdLo.png);
+    --couleurbouton: #fff;
+    --couleurmain1: #5e2e2e;
+    --couleurmain2: #C68160;
+    --couleurtexte: #f3eded;
+  --maingrad1: linear-gradient(to right,var(--couleurmain1),var(--couleurmain2));
+  
+    --maingrad2: linear-gradient(to right,rgba(94,46,46,0.5),rgba(198,129,96,0.5));
+    --couleurbody: #000;
+  
+  
+  --bgheader:url('https://i.imgur.com/nXudkaF.png');
+  --cranesbg:url('https://i.imgur.com/8QqRQzu.png');
+  --sukunah:url(https://i.imgur.com/ODjD2B9.png);
+  --frontcrane:url('https://i.imgur.com/tLYSi3G.png');
+  
+  /**
+  
+  
+    
+  --bgheader:url('https://i.imgur.com/gScg21D.png');
+  --cranesbg:url('https://i.imgur.com/hdsbKcK.png');
+  --sukunah:url('https://i.imgur.com/vg0gpgI.png');
+  --frontcrane:url('https://i.imgur.com/PCPeiJ2.png');
+  
+  
+  **/
+  
+}
+
+body {
+    background-color: var(--couleurbody);
+    background-image: var(--maingrad2);
+    font-family: var(--font);
+    font-size: var(--normal-size);
+    color: var(--couleurtexte);
+    margin: auto;
+    transition: .5s ease-in;
+  height:450px;
+}
+
+#conteneur {
+margin: auto;
+    text-align: center;
+    width: 90%;
+    height: 95vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#bgheader { 
+  filter: blur(2px);
+  position:absolute;
+    z-index: 3;
+    transition: .5s ease-in;
+    height: 100%;
+    width: 100%;
+    background-image: var(--bgheader);
+    background-size: cover;
+    background-position: center;
+}
+
+#cranesbg {
+  filter: blur(1px);
+  position:absolute;
+  background-image: var(--cranesbg);
+     z-index: 3;
+    transition: .5s ease-in;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+#sukunaheader {
+    position: absolute;
+    background-image: var(--sukunah);
+    z-index: 6;
+    transition: .5s ease-in;
+    height: 430px;
+    width: 400px;
+    bottom: 0;
+    left: 50vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#frontcrane {  position:absolute;
+  background-image: var(--frontcrane);
+  filter: blur(1px);
+     z-index: 6;
+    transition: .5s ease-in;
+    height: 30vh;
+    width: 100%;
+  bottom:0;
+    background-size: cover;
+    background-position: center;}
+
+
+/* Style the navbar */
+#navbarsticky{
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.navbar {
+background-image: var(--maingrad1);
+    border-radius: 5px;
+    margin-top: 10px;
+  justify-content: center;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    z-index: 98!important;
+}
+/******** TYPO *********/
+
+.nomforum {
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    height: 90%;
+    width: 100%;
+    margin: 0px  540px 30%;
+}
+
+.titreheader {
+    font: 300 35vh var(--font);
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 7px;
+    color: var(--couleurheader1);
+}
+
+.titreheader:before {
+  content:"Sukuna";
+ position: absolute;
+    margin-left: 4px;
+    opacity: 0.7;
+  width: 100%;
+  color:var(--couleurheader2);
+}
+
+.titresousheader {
+font: 50 20vh Arial;
+margin-top: -34x;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px #171823;
+    color: transparent
+      ;
+
+    z-index: 3;
+    position: relative;
+    width: 290px;
+    letter-spacing: -2px;
+}
+
+.titresousheader:before {
+  
+font: 400 20vh Arial;
+  mix-blend-mode: darken;
+    content: "Xatspace";
+    text-transform: uppercase;
+background: linear-gradient(90deg,var(--couleurheader1) 0%,var(--couleurheader2) 56.47%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 2;
+    position: absolute;
+    margin-left: 6px;
+    letter-spacing: -2px;
+    opacity: 0.7;
+}
+
+.ptittxt {
+    position: absolute;
+    text-transform: uppercase;
+    font: 600 2.5vh Arial;
+    margin: -10vh 0 0 94vh;
+    color: var(--couleurheader2);
+}
